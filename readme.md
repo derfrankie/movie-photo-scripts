@@ -35,6 +35,19 @@ GoPros don't create proxies for all movie resolutions/framerates and this script
 
 It looks for files with GX in the name and uses ffmpeg to create Prores proxies with 720p resolution. The proxies are stored in a Proxies subfolder and renamed to Adobe Premiere proxy naming convention by adding _Proxy to the file name.
 
+
+## Insta360 Scripts
+
+### ´insta360-air-gpsfix.sh´
+
+Insta360 makes some great little 360 cameras and I used their first small Android camera the Insta360 Air a lot. The one thing I didn't like was that they didn't export the GPS information captured in the original .INSP (the not stitched format of the images). If you stitch the .INSP into a JPG (which then is used to view it in a player) the information is lost.
+
+This script will transfer the metadata from a .INSP file to a .JPG file with the same name in the same folder.
+
+My Workflow:
+1. Stitch and Export all .INSP files with Insta360 Studio to the same folder
+2. Run the script in the folder
+
 ## Aurora HDR Scripts
 
 ### `aurorarename.sh <extension>`
@@ -61,3 +74,25 @@ aurorarename.sh <extension>
 ```
 extensions examples: JPG jpg
 
+## Mixed Scripts
+
+### ´rename-to-date.sh´
+
+This script renames files based on the creation metadata recorded by the camera. You can add a custom text to add some context to the files. I use it if I have recordings from various cameras and don't need to preserve the original filenames and I don't care with what camera the movie was recorded.
+
+Usage:
+```
+rename-to-date.sh <custom-text> <file/files>
+```
+
+Example: ´rename-to-date.sh vacation *.MOV´
+
+
+### ´fix-file-creation-date.sh´
+
+This recursive script will update the file creation date to the one recorded by the camera in the metadata. Works well with Raw, JPG, MOV and DNG files. I use this script mainly to fix files saved on the backup drive by the budget photography travel backup - [more on that project here](https://www.frankie.bz/blog/budget-travel-backup-solution-for-photographers)
+
+Usage:
+```
+fix-file-creation-date.sh
+```

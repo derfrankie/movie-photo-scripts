@@ -76,7 +76,7 @@ extensions examples: JPG jpg
 
 ## Mixed Scripts
 
-### ´rename-to-date.sh´
+### `rename-to-date.sh`
 
 This script renames files based on the creation metadata recorded by the camera. You can add a custom text to add some context to the files. I use it if I have recordings from various cameras and don't need to preserve the original filenames and I don't care with what camera the movie was recorded.
 
@@ -85,10 +85,10 @@ Usage:
 rename-to-date.sh <custom-text> <file/files>
 ```
 
-Example: ´rename-to-date.sh vacation *.MOV´
+Example: `rename-to-date.sh vacation *.MOV`
 
 
-### ´fix-file-creation-date.sh´
+### `fix-file-creation-date.sh`
 
 This recursive script will update the file creation date to the one recorded by the camera in the metadata. Works well with Raw, JPG, MOV and DNG files. I use this script mainly to fix files saved on the backup drive by the budget photography travel backup - [more on that project here](https://www.frankie.bz/blog/budget-travel-backup-solution-for-photographers)
 

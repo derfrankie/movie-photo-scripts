@@ -43,6 +43,7 @@ It looks for files with GX in the name and uses ffmpeg to create Prores proxies 
 Insta360 makes some great little 360 cameras and I used their first small Android camera the Insta360 Air a lot. The one thing I didn't like was that they didn't export the GPS information captured in the original .INSP (the not stitched format of the images). If you stitch the .INSP into a JPG (which then is used to view it in a player) the information is lost.
 
 This script will transfer the metadata from a .INSP file to a .JPG file with the same name in the same folder.
+In addition it will also update the dates in the metadata of the stitched files (which insta360 doesn't set) by extrapolating it from the filename.
 
 My Workflow:
 1. Stitch and Export all .INSP files with Insta360 Studio to the same folder
@@ -96,3 +97,9 @@ Usage:
 ```
 fix-file-creation-date.sh
 ```
+
+
+### Versions
+
+ 20190619 1.1 - Added Date-Fix to Insta360 Gps Fix script
+ 20190530 1.0 - Initial release

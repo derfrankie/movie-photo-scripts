@@ -111,5 +111,6 @@ analyse-focal-length.sh {directory}
 
 ### Versions
 
+ 20200204 1.2 - Added new script for focal lenght analysis
  20190619 1.1 - Added Date-Fix to Insta360 Gps Fix script
  20190530 1.0 - Initial release

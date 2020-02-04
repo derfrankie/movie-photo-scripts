@@ -98,6 +98,16 @@ Usage:
 fix-file-creation-date.sh
 ```
 
+### `analyse-focal-length.sh`
+
+This small script analyzes the focal lenghts of the photos of a given directory. The output is raw in a text file and then collected into a CSV which you can use to graph it out. I use it mainly to see what my most popular focal lenghts are - for trip planning mainly.
+
+[Based on the script by Rob Allen](https://akrabat.com/analysing-the-focal-length-of-my-photos/)
+
+Usage: 
+```
+analyse-focal-length.sh {directory}
+```
 
 ### Versions
 
